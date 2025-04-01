@@ -1,0 +1,24 @@
+models:
+  - name: customer_orders
+    description: "Modèle analytique qui agrège les commandes par client, en affichant leurs informations et le total des commandes passées."
+    columns:
+      - name: customer_name
+        description: Prénom et Nom du Client.
+        data_tests:
+          - not_null
+          - unique
+      - name: customer_type
+        description: Type de client régulier ou non.
+        data_tests:
+          - not_null
+          - unique
+      - name: nb_orders
+        description: Nombre total de commande.
+        data_tests:
+          - not_null
+          - unique
+      - name: total_spent
+        description: Somme dépensé.
+        data_tests:
+          - not_null
+          - unique
