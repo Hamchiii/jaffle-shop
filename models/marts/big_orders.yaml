@@ -1,21 +1,21 @@
 models:
   - name: orders_clean
-    description: "Table des commandes nettoyées issue de la source raw. Ce modèle filtre les commandes dont le total_amount est supérieur à 100$."
+    description: "Cleaned orders table sourced from raw data. This model filters orders with a total_amount greater than $100."
     columns:
       - name: order_id
-        description: "Identifiant unique de la commande."
+        description: "Unique identifier for the order."
         tests:
           - unique
           - not_null
       - name: customer_id
-        description: "Identifiant du client lié à la commande."
+        description: "Identifier of the customer associated with the order."
         tests:
           - not_null
       - name: ordered_at
-        description: "Date et heure de la commande."
+        description: "Date and time when the order was placed."
         tests:
           - not_null
       - name: order_total
-        description: "Montant total de la commande."
+        description: "Total amount of the order."
         tests:
           - not_null

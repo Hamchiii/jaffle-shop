@@ -1,0 +1,23 @@
+models:
+  - name: store_most_profitable_year
+    description: >
+      This model calculates the most profitable year for each store using data from the raw orders and stores.
+      For each store, it returns the year with the highest total sales. If a store has no orders,
+      the "most_profitable_year" will be NULL and "highest_sales" will be 0.
+    columns:
+      - name: location_id
+        description: "Unique identifier for the store from the stores table."
+        tests:
+          - not_null
+      - name: location
+        description: "The location or name of the store."
+        tests:
+          - not_null
+      - name: most_profitable_year
+        description: >
+          The year during which the store generated the highest total sales. This field may be NULL
+          if the store has no orders.
+      - name: highest_sales
+        description: "The total sales amount achieved during the most profitable year for the store."
+        tests:
+          - not_null
