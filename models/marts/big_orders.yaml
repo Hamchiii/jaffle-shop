@@ -1,5 +1,5 @@
 models:
-  - name: orders_clean
+  - name: big_orders
     description: "Cleaned orders table sourced from raw data. This model filters orders with a total_amount greater than $100."
     columns:
       - name: order_id

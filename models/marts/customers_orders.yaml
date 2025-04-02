@@ -1,5 +1,5 @@
 models:
-  - name: customer_orders
+  - name: customers_orders
     description: "Analytical model that aggregates orders by customer, displaying their information and the total number of orders placed."
     columns:
       - name: customer_name
