@@ -1,0 +1,24 @@
+models:
+  - name: customer_orders
+    description: "Analytical model that aggregates orders by customer, displaying their information and the total number of orders placed."
+    columns:
+      - name: customer_name
+        description: "Customer's first and last name."
+        data_tests:
+          - not_null
+          - unique
+      - name: customer_type
+        description: "Type of customer, whether regular or not."
+        data_tests:
+          - not_null
+          - unique
+      - name: nb_orders
+        description: "Total number of orders."
+        data_tests:
+          - not_null
+          - unique
+      - name: total_spent
+        description: "Total amount spent."
+        data_tests:
+          - not_null
+          - unique
